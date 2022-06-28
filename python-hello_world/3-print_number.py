@@ -1,3 +1,6 @@
 #!/usr/bin/python3
+from sympy import N
+
+
 number = 98
-print(f"%d Battery street"%number)
+print("{:d} Battery street".format(number))
