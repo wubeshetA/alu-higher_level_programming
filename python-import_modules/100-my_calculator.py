@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 import sys
-
-from numpy import subtract
 from calculator_1 import add, sub, mul, div
 
 
