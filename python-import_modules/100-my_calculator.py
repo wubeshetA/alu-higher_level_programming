@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-from ast import operator
 import sys
-from pyrsistent import b
+
+from numpy import subtract
 from calculator_1 import add, sub, mul, div
 
 
@@ -19,13 +19,13 @@ def main():
     b = int(args[2])
     operator = args[1]
     if operator == '+':
-        result = a + b
+        result = add(a, b)
     elif operator == '-':
-        result = a - b
+        result = sub(a, b)
     elif operator == '*':
-        result = a * b
+        result = mul(a, b)
     elif operator == '/':
-        result = a / b
+        result = div(a, b)
     print("{} {} {} = {}".format(a, operator, b, result))
 
 
