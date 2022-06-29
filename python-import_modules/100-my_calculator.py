@@ -1,0 +1,33 @@
+#!/usr/bin/python3
+from ast import operator
+import sys
+from pyrsistent import b
+from calculator_1 import add, sub, mul, div
+
+
+def main():
+    args = sys.argv[1:]
+    args_len = len(args)
+    if args_len != 3:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
+    if args[1] != '+' and args[1] != '-' and args[1] != '*' and args[1] != '/':
+        print("operator: %s" % args[1])
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
+    a = int(args[0])
+    b = int(args[2])
+    operator = args[1]
+    if operator == '+':
+        result = a + b
+    elif operator == '-':
+        result = a - b
+    elif operator == '*':
+        result = a * b
+    elif operator == '/':
+        result = a / b
+    print("{} {} {} = {}".format(a, operator, b, result))
+
+
+if __name__ == "__main__":
+    main()
