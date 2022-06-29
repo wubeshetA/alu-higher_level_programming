@@ -9,8 +9,7 @@ def main(argv):
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     if args[1] != '+' and args[1] != '-' and args[1] != '*' and args[1] != '/':
-        print("operator: %s" % args[1])
-        print("Unknown operator. Only: +, -, * and / available")
+        print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
     a = int(args[0])
     b = int(args[2])
