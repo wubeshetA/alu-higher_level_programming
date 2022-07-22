@@ -5,10 +5,6 @@ This is a Rectangle class.
 '''
 
 
-from cmath import rect
-from tracemalloc import start
-
-
 class Rectangle:
     '''class: Rectangle this is an empty class
     '''
