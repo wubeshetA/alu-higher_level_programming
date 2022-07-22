@@ -91,14 +91,3 @@ class Square:
             for i in range(self.__size):
                 print(" " * self.__position[0] + "#" * self.__size)
         return ""
-
-
-Square = __import__('101-square').Square
-
-my_square = Square(5, (0, 0))
-print(my_square)
-
-print("--")
-
-my_square = Square(5, (4, 1))
-print(my_square)
