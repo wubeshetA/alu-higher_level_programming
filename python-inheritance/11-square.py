@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 more class base
@@ -6,8 +5,6 @@ more class base
 
 
 Rectangle = __import__('9-rectangle').Rectangle
-
-
 """
 Square class
 """
@@ -15,6 +12,7 @@ Square class
 
 class Square(Rectangle):
     """ Square Class """
+
     def __init__(self, size):
         """ size init"""
         self.__size = size
