@@ -5,9 +5,6 @@
 def pascal_triangle(n):
     """Creates pascal triangle"""
 
-    if n <= 0:
-        return
-
     pascals_triangle = []
 
     for i in range(n):
