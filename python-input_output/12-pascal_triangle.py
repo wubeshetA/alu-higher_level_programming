@@ -6,7 +6,7 @@ def pascal_triangle(n):
     """Creates pascal triangle"""
 
     if n <= 0:
-        return [[]]
+        return
 
     pascals_triangle = []
 
