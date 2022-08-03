@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""A script that sends a request and returns the body of the request.
+"""
+A script that sends a request and prints the body of the response.
 """
 
 
