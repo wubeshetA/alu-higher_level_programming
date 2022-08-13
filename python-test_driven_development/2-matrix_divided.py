@@ -6,7 +6,7 @@ def matrix_divided(matrix, div):
     """Returns a new matrix after dividing each element with div
 
     All elements of the matrix are divided by div, rounded by 2 decimal places
-    
+
     Raises:
         TypeError: If elements of matrix are not integer or float.
         TypeError: If each row of the matrix doesn't have the same size.
@@ -22,8 +22,11 @@ def matrix_divided(matrix, div):
         if len(row) != len(first_row):
             raise TypeError("Each row of the matrix must have the same size")
         for col in row:
-            if isinstance(col, int) is not True and isinstance(col, float) is not True:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            if (isinstance(col, int) is not True and isinstance(col, float)
+                    is not True):
+                raise
+            TypeError(
+                "matrix must be a matrix (list of lists) of integers/floats")
 
     return ([list(map(lambda x: round(x / div, 2), row)) for row in matrix])
 
@@ -33,4 +36,3 @@ def matrix_divided(matrix, div):
 # ]
 # print(matrix_divided(matrix, 3))
 # print(matrix)
-            
