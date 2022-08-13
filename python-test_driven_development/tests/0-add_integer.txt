@@ -1,4 +1,7 @@
-"""
+=====================
+Test 0-add_integer.py
+=====================
+
 >>> add_integer = __import__('0-add_integer').add_integer
 >>> add_integer(2)
 100
@@ -8,25 +11,18 @@
 -3
 >>> add_integer(2.5, -100)
 -98
->>> add_integer(2, "3")
+>>> add_integer("hello", 3)
 Traceback (most recent call last):
-...
-TypeError: unsupported operand type(s) for +: 'int' and 'str'
->>> add_integer(2, [3])
+TypeError: a must be an integer
+
+>>> add_integer(2, "hello")
 Traceback (most recent call last):
-...
-TypeError: unsupported operand type(s) for +: 'int' and 'list'
->>> add_integer(2, (3,))
+TypeError: b must be an integer
+
+>>> add_integer(float('nan'))
 Traceback (most recent call last):
-...
-TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
->>> add_integer(2, {3})
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(float('inf'))
 Traceback (most recent call last):
-...
-TypeError: unsupported operand type(s) for +: 'int' and 'set'
->>> add_integer(2, None)
-Traceback (most recent call last):
-...
-TypeError: unsupported operand type(s) for +: 'int' and 'NoneType'
->>> 
-"""
+OverflowError: cannot convert float infinity to integer
