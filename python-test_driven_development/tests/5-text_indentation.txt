@@ -11,6 +11,7 @@ Regular test
     Hello.
     <BLANKLINE>
     How are you?
+    <BLANKLINE>
     >>> text_indentation("Lists: list1, list2")
     Lists:
     <BLANKLINE>
