@@ -3,6 +3,8 @@
 
 
 def matrix_mul(m_a, m_b):
+    """a matrix multiplication function"""
+
     if type(m_a) != list:
         raise TypeError("m_a must be a list")
     if type(m_b) != list:
