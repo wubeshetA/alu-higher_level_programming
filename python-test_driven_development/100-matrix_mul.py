@@ -40,7 +40,3 @@ def matrix_mul(m_a, m_b):
             for k in range(len(m_b)):
                 m_c[i][j] += m_a[i][k] * m_b[k][j]
     return m_c
-
-
-print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
-print(matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
