@@ -126,6 +126,16 @@ class Rectangle(Base):
         except IndexError:
             pass
 
+    def to_dictionary(self):
+        '''
+            Returns a dictionary representation of this class
+        '''
+        return {'x': self.x,
+                'y': self.y,
+                'id': self.id,
+                'height': self.height,
+                'width': self.width}
+
     def __str__(self):
         '''
             Overwritting the str method
