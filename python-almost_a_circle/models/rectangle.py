@@ -11,6 +11,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """ Initialize the rectangle"""
         super().__init__(id)
+        self.validate_value("width", width)
+        self.validate_value("height", height)
+        self.validate_value("x", x)
+        self.validate_value("y", y)
         self.__width = width
         self.__height = height
         self.__x = x
@@ -28,7 +32,7 @@ class Rectangle(Base):
         """
         set private attribute width
         """
-        self.validate_value("x", value)
+        self.validate_value("width", value)
         self.__width = value
 
     @property
