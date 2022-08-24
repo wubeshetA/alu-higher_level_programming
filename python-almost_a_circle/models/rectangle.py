@@ -11,11 +11,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """ Initialize the rectangle"""
         super().__init__(id)
-        self.id = id
-        __width = width
-        __height = height
-        __x = x
-        __y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
@@ -44,3 +43,31 @@ class Rectangle(Base):
             Setting private attribute
         '''
         self.__height = value
+
+    @property
+    def x(self):
+        '''
+            Returning private attribute
+        '''
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        '''
+            Setting private attribute
+        '''
+        self.__x = value
+
+    @property
+    def y(self):
+        '''
+            Returning private attribute
+        '''
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        '''
+            Setting private attribute
+        '''
+        self.__y = value
