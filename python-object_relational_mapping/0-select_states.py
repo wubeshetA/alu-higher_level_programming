@@ -12,12 +12,14 @@ def main():
     password = sys.argv[2]
     db_name = sys.argv[3]
 
-    db = MySQLdb.connect(host="localhost", user=username,
+    db = MySQLdb.connect(host="localhost", port=3306, user=username,
                          passwd=password, db=db_name)
     cursor = db.cursor()
-    result = cursor.execute("SELECT * FROM hbtn_0e_0_usa.states")
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    result = cursor.fetchall()
+    for i in result:
+        print(i)
     cursor.close()
-    return result
 
 
 if __name__ == "__main__":
