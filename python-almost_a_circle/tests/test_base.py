@@ -46,7 +46,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(p.total_errors, 0, "fix pep8")
 
     def test_docstrings(self):
-        self.assertIsNotNone(module_doc)
         self.assertIsNotNone(Base.__doc__)
         self.assertIs(hasattr(Base, "__init__"), True)
         self.assertIsNotNone(Base.__init__.__doc__)
