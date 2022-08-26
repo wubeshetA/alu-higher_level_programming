@@ -665,8 +665,7 @@ class TestSquare_to_dictionary(unittest.TestCase):
 
     def test_stf_empty(self):
         """test save_to_file with empty list"""
-        square = []
-        Square.save_to_file(square)
+        Square.save_to_file([])
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
 

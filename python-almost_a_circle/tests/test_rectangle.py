@@ -813,8 +813,7 @@ class TestRectangle_to_dictionary(unittest.TestCase):
 
     def test_stf_empty(self):
         """test save_to_file with empty list"""
-        rect = []
-        Rectangle.save_to_file(rect)
+        Rectangle.save_to_file([])
         with open("Rectangle.json", "r") as f:
             self.assertEqual("[]", f.read())
 
