@@ -13,6 +13,7 @@ Unittest classes:
     TestSquare_to_dictionary - 640
 """
 import io
+import json
 import sys
 import unittest
 from models.base import Base
@@ -651,6 +652,29 @@ class TestSquare_to_dictionary(unittest.TestCase):
         s = Square(10, 10, 10, 10)
         with self.assertRaises(TypeError):
             s.to_dictionary(1)
+
+    def test_save_to_file(self):
+        """test regular use of save_to_file"""
+        r1 = Square(9, 1, 1, 1)
+        r2 = Square(4, 2, 2, 2)
+        squares = [r1, r2]
+        Square.save_to_file(squares)
+        with open("Square.json", "r") as f:
+            ls = [r1.to_dictionary(), r2.to_dictionary()]
+            self.assertEqual(json.dumps(ls), f.read())
+
+    def test_stf_empty(self):
+        """test save_to_file with empty list"""
+        square = []
+        Square.save_to_file(square)
+        with open("Square.json", "r") as f:
+            self.assertEqual("[]", f.read())
+
+    def test_stf_None(self):
+        """test save_to_file with None"""
+        Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            self.assertEqual("[]", f.read())
 
 
 if __name__ == "__main__":
