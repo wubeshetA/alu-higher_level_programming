@@ -11,7 +11,7 @@ request(url, (error, response, body) => {
     let counter = 0;
     results.forEach(result => {
       result.characters.forEach(characterUrl => {
-        if (characterUrl === 'https://swapi-api.hbtn.io/api/people/18/') {
+        if (characterUrl.includes('18')) {
           counter++;
         }
       });
